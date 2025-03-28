@@ -1,4 +1,131 @@
 /* 基本樣式 */
+/* 響應式設計 */
+@media (max-width: 767px) and (orientation: portrait) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .content-with-image {
+    flex-direction: column;
+    position: relative;
+    min-height: 300px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .content-with-image > div {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  .content-img {
+    display: none;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  #about .content-with-image {
+    background-image: url('../images/logo.png');
+  }
+  
+  #mission .content-with-image {
+    background-image: url('../images/vision.png');
+  }
+  
+  #values .content-with-image {
+    background-image: url('../images/value.jpg');
+  }
+  
+  #services .content-with-image {
+    background-image: url('../images/services.jpg');
+  }
+  
+  #products .content-with-image {
+    background-image: url('../images/products.jpg');
+  }
+  
+  #contact .content-with-image {
+    background-image: url('../images/contact.jpg');
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  header {
+    padding: 0.5rem;
+  }
+  
+  .content-with-image {
+    flex-direction: row;
+  }
+  
+  .content-img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding: 0 20px;
+  }
+  
+  .content-with-image {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .content-img {
+    width: 50%;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 0 50px;
+  }
+  
+  .content-with-image {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .content-img {
+    width: 40%;
+    margin-right: 30px;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 body {

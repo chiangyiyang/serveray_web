@@ -25,3 +25,28 @@ window.addEventListener('resize', () => {
         nav.classList.remove('nav-open');
     }
 });
+
+// 圖片延遲加載
+const images = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+        }
+    });
+});
+
+images.forEach(img => {
+    imageObserver.observe(img);
+});
+
+// 處理初始加載
+window.addEventListener('load', () => {
+    // 檢查視窗大小並調整導航列
+    if (window.innerWidth <= 768) {
+        nav.classList.remove('nav-open');
+    }
+});
