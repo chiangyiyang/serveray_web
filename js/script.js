@@ -43,6 +43,21 @@ images.forEach(img => {
     imageObserver.observe(img);
 });
 
+// 處理郵件表單彈出
+const emailLink = document.getElementById('email-link');
+if (emailLink) {
+    emailLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = 'sales@serve-ray.com';
+        const isEnglish = document.documentElement.lang === 'en';
+        const subject = isEnglish ? 'Service Inquiry' : '服務諮詢';
+        const body = isEnglish ? 'Hello, I would like to know more about...' : '您好，我想了解更多關於...';
+        
+        const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+    });
+}
+
 // 處理初始加載
 window.addEventListener('load', () => {
     // 檢查視窗大小並調整導航列
