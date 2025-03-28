@@ -1,0 +1,243 @@
+/* 基本樣式 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #00bcd4;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #00bcd4;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00e5ff;
+}
+
+section {
+    margin: 0 auto 2rem;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-with-image > div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.content-with-image {
+    justify-content: center;
+}
+
+p, li {
+    color: #333333;
+}
+
+.content-with-image img {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../images/header_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-with-image {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+section:nth-child(odd) .content-with-image {
+    flex-direction: row;
+}
+
+section:nth-child(even) .content-with-image {
+    flex-direction: row-reverse;
+}
+
+.content-with-image img {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-img {
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section h2 {
+        order: 1;
+    }
+
+    .content-with-image {
+        flex-direction: column;
+    }
+
+    .content-with-image img {
+        width: 90%;
+        order: 2;
+    }
+
+    .content-with-image > div {
+        order: 3;
+    }
+}
+
+h2, h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* 導航欄切換按鈕 */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-open {
+        display: flex;
+    }
+}
