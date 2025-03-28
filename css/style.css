@@ -260,6 +260,17 @@ nav a {
     text-decoration: none;
 }
 
+.language-switch {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switch:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 main {
     padding: 2rem;
 }
